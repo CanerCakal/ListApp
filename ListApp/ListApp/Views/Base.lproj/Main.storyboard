@@ -28,7 +28,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="402" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -36,7 +35,22 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="ListApp" id="kWU-1n-AkD"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="ListApp" id="kWU-1n-AkD">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="WHa-pF-Whh">
+                            <color key="tintColor" systemColor="systemRedColor"/>
+                            <connections>
+                                <action selector="didRemoveBarButtonItemTapped:" destination="BYZ-38-t0r" id="H5k-Jk-Zf0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Oj8-5H-3xO">
+                            <color key="tintColor" systemColor="linkColor"/>
+                            <connections>
+                                <action selector="didAddBarButtonItemTapped:" destination="BYZ-38-t0r" id="aHj-DU-gAa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="Sfv-VP-lcw" id="bZv-e1-3FX"/>
                     </connections>
@@ -65,11 +79,14 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
